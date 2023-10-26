@@ -1,0 +1,85 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(bck/Safari-GettyImages-143917249.webp);
+    background-size: cover;
+  }
+  
+  label{
+    font-weight: bolder;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  
+  .game-container {
+    text-align: center;
+  }
+  
+  #start-screen {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  #game-screen {
+    position: relative;
+  }
+  
+  #timer {
+    position: absolute;
+    top: auto;
+    right: 10%;
+    padding: 15px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .card {
+    text-align: center;
+    display:inline-block ;
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    background-color: #ccc;
+  }
+  
+  .front-face,.back-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .front-face {
+    background-color: #ccc;
+  }
+  
+  .back-face {
+    transform: rotateY(180deg);
+    background-size: cover;
+    background-position: center;
+  }
+  .card.flipped .front-face {
+    transform: rotateY(180deg);
+  }
+  
+  .card.flipped .back-face {
+    transform: rotateY(0deg);
+  }
